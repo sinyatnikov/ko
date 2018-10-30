@@ -1,0 +1,16 @@
+<h1>Ошибка <%= @code.name %> <%= link_to '', edit_code_path(@code), class: 'fas fa-edit text-warning', title: "Редактировать ошибку" %><%= link_to '', @code, method: :delete, data: { confirm: 'Вы уверены что хотите удалить ошибку?' }, class: 'far fa-trash-alt text-danger', title: "Удалить ошибку" %></h1>
+<div class="row">
+	<div class="col-lg-8">
+		<h5 class="text-muted"><%= @code.info %></h5>
+
+<div>
+	<%= @code.description.html_safe %>
+</div>
+
+<%= link_to 'Вернуться к списку ошибок', codes_path %>
+	</div>
+	<div class="col-lg-4">
+		
+	</div>
+</div>
+

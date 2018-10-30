@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="add_code_index">
+  <%= link_to 'Добавить новую ошибку', new_code_path %>
+</div>
+
+<h1 style="text-align: center;">Расшифровка кодов ошибок OBD</h1>
+<p style="text-align: center;">Ваш помошник в диагностике автомобиля</p>
+<div class="row">
+  <% @codes.each do |code| %> 
+    <div class="col-sm-2 code_index_item">
+      <a href="/codes/<%= code.slug %>">
+         <%= code.name %>
+      </a>
+    </div>
+  <% end %>
+</div>
+
+

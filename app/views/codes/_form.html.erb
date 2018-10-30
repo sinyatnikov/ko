@@ -1,0 +1,6 @@
+<%= simple_form_for @code do |f| %>  
+  <%= f.input :name, label:"Название ошибки"%>
+  <%= f.input :info, label:"Расшифровка ошибки" %>
+  <%= f.trix_editor :description, label:"Описание Ошибки" %>
+  <%= f.button :submit %>
+<% end %>
